@@ -1,0 +1,32 @@
+Misaka Installation:
+
+Installation
+Misaka has been tested on CPython 2.7, 3.2, 3.4, 3.5, 3.6, 3.7 and PyPy 2.7 and 3.5. It needs CFFI 1.0 or newer, because of this it will not work on PyPy 2.5 and older.
+
+With pip:
+  pip install misaka
+
+Or manually:
+      For installing misaka manually, first you need to clone misaka-master from "https://github.com/FSX/misaka" after download is done copy the "misaka-master" and cd into directory where pip install its packages and paste "misaka-master".
+      For checking where pip installs your package type "pip show #any_preinstalled_package_name".
+      And when misaka-master is pasted in packages directory type "python setup.py install" in cmd in that directory.
+
+If you are lucky enough you'll succesfully install Misaka package.
+
+So while researching I came across two types of error:
+              1. Failed building wheel for misaka
+              and
+              2. error: Microsoft Visual C++ 14.0 is required.
+
+Solution 1: 
+              Update your Windows SDK using "https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/"
+
+Solution 2: 
+              Install Anaconda
+              Run the following commands:
+              conda install libpython m2w64-toolchain -c msys2
+              python -m pip install --upgrade pip
+              pip install misaka
+              
+              
+  I use pycharm for running my python projects so what I found best was to change my interpreter in pycharm to conda interpreter.
